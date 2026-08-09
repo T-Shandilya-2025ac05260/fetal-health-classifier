@@ -161,12 +161,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown(f"<h3 style='color:{TEAL};font-size:1rem;'>📊 Dataset</h3>", unsafe_allow_html=True)
     st.markdown(
-        f"<p style='color:{TEXT_MUTED};font-size:0.85rem;'>"
-        "<b>Fetal Health Classification</b> (Kaggle)
-"
-        "2,126 CTG records × 21 features
-"
-        "3 classes: Normal / Suspect / Pathological</p>",
+        f"<p style='color:{TEXT_MUTED};font-size:0.85rem;'><b>Fetal Health Classification</b> (Kaggle)<br>2,126 CTG records × 21 features<br>3 classes: Normal / Suspect / Pathological</p>",
         unsafe_allow_html=True
     )
 
@@ -441,9 +436,6 @@ st.markdown(
 # ============================================================
 st.divider()
 st.markdown(
-    f"<div style='text-align:center;color:{TEXT_MUTED};padding:20px 0;'>"
-    f"Built with 💜 for <b>BITS Pilani M.Tech AIML</b> · Machine Learning Assignment 2 (2025-2026)
-"
-    f"<span style='font-size:0.85rem;'>Deployed on Streamlit Community Cloud</span></div>",
+    f"<div style='text-align:center;color:{TEXT_MUTED};padding:20px 0;'>Built with 💜 for <b>BITS Pilani M.Tech AIML</b> · Machine Learning Assignment 2 (2025-2026)<br><span style='font-size:0.85rem;'>Deployed on Streamlit Community Cloud</span></div>",
     unsafe_allow_html=True
 )
