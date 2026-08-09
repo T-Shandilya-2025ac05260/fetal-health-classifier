@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.env
+ 
+# System
+.DS_Store
+Thumbs.db
+ 
+# Do not commit the raw dataset — only test_data.csv ships with the repo
+fetal_health.csv
