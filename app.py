@@ -177,6 +177,7 @@ with st.sidebar:
         )
     st.markdown("---")
     st.caption("BITS Pilani M.Tech AIML · ML Assignment 2")
+    st.caption("BITS ID: 2025AC05260")
 
 # ============================================================
 # UPLOAD
@@ -428,14 +429,5 @@ st.markdown(
     f"padding:16px 20px;border-radius:12px;border-left:4px solid {TEAL};margin-top:16px;'>"
     f"<p style='color:{TEXT_MUTED};margin:0;font-size:0.85rem;'>🏆 OVERALL WINNER (BY MCC)</p>"
     f"<h3 style='color:{TEAL};margin:4px 0 0 0;'>{winner}</h3></div>",
-    unsafe_allow_html=True
-)
-
-# ============================================================
-# FOOTER
-# ============================================================
-st.divider()
-st.markdown(
-    f"<div style='text-align:center;color:{TEXT_MUTED};padding:20px 0;'>Built with 💜 for <b>BITS Pilani M.Tech AIML</b> · Machine Learning Assignment 2 (2025-2026)<br><span style='font-size:0.85rem;'>Deployed on Streamlit Community Cloud</span></div>",
     unsafe_allow_html=True
 )
