@@ -269,7 +269,7 @@ with tab1:
     cm = confusion_matrix(y, y_pred)
     cmap = LinearSegmentedColormap.from_list('purple_teal', [DARK_BG, PURPLE, TEAL], N=256)
 
-    fig, ax = plt.subplots(figsize=(7, 5.5), facecolor=DARK_BG)
+    fig, ax = plt.subplots(figsize=(5.5, 4.5), facecolor=DARK_BG)
     ax.set_facecolor(DARK_BG)
     sns.heatmap(
         cm, annot=True, fmt='d', cmap=cmap,
@@ -282,7 +282,9 @@ with tab1:
     ax.tick_params(colors=TEXT_LIGHT)
     for spine in ax.spines.values():
         spine.set_edgecolor(TEXT_MUTED)
-    st.pyplot(fig, use_container_width=False)
+    col_left, col_center, col_right = st.columns([1, 3, 1])
+    with col_center:
+        st.pyplot(fig, use_container_width=True)
 
     st.markdown(f"<h4 style='color:{TEAL};'>Error Analysis</h4>", unsafe_allow_html=True)
     e1, e2, e3 = st.columns(3)
@@ -377,7 +379,7 @@ with tab3:
         n = len(feat_imp)
         grad = [(0.078+(0.66-0.078)*i/n, 0.72-(0.72-0.33)*i/n, 0.65+(0.97-0.65)*i/n) for i in range(n)]
 
-        fig, ax = plt.subplots(figsize=(7, 5.5), facecolor=DARK_BG)
+        fig, ax = plt.subplots(figsize=(5.5, 4.5), facecolor=DARK_BG)
         ax.set_facecolor(DARK_BG)
         ax.barh(feat_imp['feature'], feat_imp['importance'], color=grad, edgecolor='none')
         ax.set_xlabel('Importance', color=TEXT_LIGHT, fontsize=10)
