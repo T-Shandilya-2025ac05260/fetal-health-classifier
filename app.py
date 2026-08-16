@@ -336,7 +336,7 @@ with tab2:
                     fontweight='bold', fontsize=11)
         ax.set_xlim(0, 1.15)
         ax.set_xlabel('Probability', color=TEXT_LIGHT, fontsize=11)
-        ax.tick_params(colors=TEXT_LIGHT)
+        ax.tick_params(colors=TEXT_LIGHT, labelsize=9)
         for s in ['top','right']:
             ax.spines[s].set_visible(False)
         for s in ['left','bottom']:
@@ -377,19 +377,24 @@ with tab3:
         n = len(feat_imp)
         grad = [(0.078+(0.66-0.078)*i/n, 0.72-(0.72-0.33)*i/n, 0.65+(0.97-0.65)*i/n) for i in range(n)]
 
-        fig, ax = plt.subplots(figsize=(10, 7), facecolor=DARK_BG)
+        fig, ax = plt.subplots(figsize=(7, 5.5), facecolor=DARK_BG)
         ax.set_facecolor(DARK_BG)
         ax.barh(feat_imp['feature'], feat_imp['importance'], color=grad, edgecolor='none')
-        ax.set_xlabel('Importance', color=TEXT_LIGHT, fontsize=11)
-        ax.tick_params(colors=TEXT_LIGHT)
+        ax.set_xlabel('Importance', color=TEXT_LIGHT, fontsize=10)
+        ax.tick_params(colors=TEXT_LIGHT, labelsize=9)
         for s in ['top','right']:
             ax.spines[s].set_visible(False)
         for s in ['left','bottom']:
             ax.spines[s].set_edgecolor(TEXT_MUTED)
         ax.grid(axis='x', color=BORDER, alpha=0.5)
         ax.set_axisbelow(True)
-        ax.set_title('Top 15 Most Important Features', color=TEXT_LIGHT, fontsize=13, pad=15, loc='left')
-        st.pyplot(fig, use_container_width=True)
+        ax.set_title('Top 15 Most Important Features', color=TEXT_LIGHT, fontsize=12, pad=12, loc='left')
+
+        fi_left, fi_center, fi_right = st.columns([1, 4, 1])
+
+        with fi_center:
+
+            st.pyplot(fig, use_container_width=True)
 
 st.divider()
 
